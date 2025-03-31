@@ -12,7 +12,7 @@
     <div class="hero-text">
         <h1>Welcome to the Future of Walking</h1>
         <p>Step confidently with our smart walking stick, equipped with advanced sensors to guide you through obstacles, wet floors, and emergencies.</p>
-        <button class="explore-btn">Download Now</button>
+        <button class="explore-btn" onclick="downloadFile()">Download Now</button>
     </div>
     <div class="hero-image">
         <div class="features-icons">
@@ -132,5 +132,16 @@
         </div>
     </div>
 </section>
+<script>
+    function downloadFile() {
+      const fileUrl = 'path/to/your-file.pdf'; // Update with your actual file path
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = 'Smart_Walking_Stick_Manual.pdf'; // Customize the file name
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
 </body>
 </html>
